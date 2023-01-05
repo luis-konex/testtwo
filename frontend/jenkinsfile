@@ -17,7 +17,7 @@ pipeline {
       steps {
         git branch: 'main', url: 'https://github.com/luis-konex/testtwo.git'
         dir('frontend') {
-          sh 'npm install'
+          bat 'npm install'
         }
       }
     }
@@ -25,7 +25,7 @@ pipeline {
     stage('test') {
       steps {
         dir('frontend') {
-          sh 'npm run test'
+          bat 'npm run test'
         }
       }
     }
